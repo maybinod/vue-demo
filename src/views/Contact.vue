@@ -2,11 +2,6 @@
   <div class="home">
     <h2>Contact Us Page</h2>
 
-    <Form @form:submit="onFormSubmit" :email="'testEmail'">
-      <template #button>
-        <button>Test</button>
-      </template>
-    </Form>
   </div>
 </template>
 
