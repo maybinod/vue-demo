@@ -37,6 +37,7 @@
 
 <script>
 import axios from "axios";
+import userMixin from '@/mixins'
 
 export default {
   created () {
@@ -48,12 +49,6 @@ export default {
       users: [],
       showModal: false,
       user: ''
-    }
-  },
-
-  computed: {
-    isLoggedIn () {
-      return localStorage.getItem('access_token')
     }
   },
 
@@ -94,6 +89,10 @@ export default {
         this.$router.push({ name: 'login' })
       })
     }
-  }
+  },
+
+  mixins: [
+      userMixin
+  ]
 }
 </script>
